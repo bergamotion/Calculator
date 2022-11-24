@@ -156,8 +156,19 @@ window.addEventListener("keydown", (e) => {
     }
 
     if (e.key == "Enter") {
-        dealWithOperator(document.querySelector(`button[data-key="="]`));
+        dealWithOperator(document.querySelector(`button[data-key="= "]`));
         e.preventDefault();
         return;
+    }
+});
+
+
+//Theme animation
+const toggle = document.getElementById("toggle-label");
+toggle.addEventListener("click", function() {
+    if (document.documentElement.dataset.theme == "light") {
+        document.documentElement.setAttribute("data-theme" , "dark");
+    } else {
+        document.documentElement.setAttribute("data-theme" , "light");
     }
 });
