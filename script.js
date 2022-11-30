@@ -125,7 +125,7 @@ clearButton.addEventListener("click", clearDisplay);
 
 
 //Keyboard handling
-let numberKeys = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+let numberKeys = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "Num"];
 let operatorKeys = ["+", "-", "/", "*", "="]
 
 window.addEventListener("keydown", (e) => {
@@ -172,3 +172,4 @@ toggle.addEventListener("click", function() {
         document.documentElement.setAttribute("data-theme" , "light");
     }
 });
+

@@ -11,7 +11,7 @@
     --indigo-border: #5d6baa;
     --indigo-color: #6b7abb;
     --gray-border: #e8e8ea;
-    --gray-dots: #e8e8ea;
+    --gray-dots: #c5c5c6;
     /* Light theme */
     --blue-background: #c2e9f6;
     --blue-border: #72cce3;
@@ -68,6 +68,7 @@ button {
 }
 
 button:hover {
+    transition-delay: -100ms;
     background-color: var(--hover);
 }
 
@@ -195,6 +196,23 @@ button:active {
     animation-name: switch;
     animation-duration: 350ms;
     animation-fill-mode: forwards;
+}
+
+.toggle-label:after {
+    transition: all 250ms ease-in;
+    content: "";
+    position: absolute;
+    box-shadow: 63px -2px 0 0 var(--gray-dots), 55px 8px 0 -2px var(--gray-dots);
+    top: 10px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    opacity: 0;
+}
+
+.toggle-checkbox:checked + .toggle-label:after {
+    transition-delay: 100ms;
+    opacity: 1;
 }
 
 @keyframes switch {
