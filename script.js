@@ -125,7 +125,7 @@ clearButton.addEventListener("click", clearDisplay);
 
 
 //Keyboard handling
-let numberKeys = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "Num"];
+let numberKeys = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 let operatorKeys = ["+", "-", "/", "*", "="]
 
 window.addEventListener("keydown", (e) => {
@@ -156,7 +156,7 @@ window.addEventListener("keydown", (e) => {
     }
 
     if (e.key == "Enter") {
-        dealWithOperator(document.querySelector(`button[data-key="= "]`));
+        dealWithOperator(document.querySelector(`button[data-key="="]`));
         e.preventDefault();
         return;
     }
@@ -164,6 +164,8 @@ window.addEventListener("keydown", (e) => {
 
 
 //Theme animation
+document.getElementById("toggle").checked = false;
+
 const toggle = document.getElementById("toggle-label");
 toggle.addEventListener("click", function() {
     if (document.documentElement.dataset.theme == "light") {
